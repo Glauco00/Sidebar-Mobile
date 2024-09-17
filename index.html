@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <div class="button-sidebar" id="buttonSidebar">
+      <img id="openSidebar" src="img/ícones-rotas-turismo-IG.webp" alt="open_button" />
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <img src="img/icons8-x-48.png" class="close_button" id="closeSidebar" alt="close_button" />
+
+      <h2>Filtros</h2>
+
+      <div class="menu-item">
+        <div>
+          <a href="#home">Municípios</a>
+          <select name="" id="selectCidades">
+            <option value="" disabled selected>Selecione uma Cidade</option>
+          </select>
+        </div>
+        <img src="./img/ícones-municipios.webp" alt="Municípios" />
+      </div>
+
+      <div class="menu-item">
+        <div>
+          <a href="#services">Vinícolas</a>
+          <select name="" id="selectVinicolas">
+            <option value="" disabled selected>Selecione uma vinícola</option>
+          </select>
+        </div>
+        <img src="./img/íconesvinisserra-IG.webp" alt="Serviços" />
+      </div>
+
+      <div class="menu-item">
+        <div class="rast-section">
+          <a href="#services" class="rast-link">Rastreabilidade</a>
+          <div class="radio-options">
+            <input
+              id="rastDigital"
+              type="radio"
+              name="rast"
+              value="digital"
+              onchange="filterRastreabilidade('digital')"
+            />
+            <label for="rastDigital">Digital</label>
+
+            <input
+              id="rastAnalogica"
+              type="radio"
+              name="rast"
+              value="analogica"
+              onchange="filterRastreabilidade('analogica')"
+            />
+            <label for="rastAnalogica">Analógica</label>
+
+            <input
+              id="rastTodos"
+              type="radio"
+              name="rast"
+              value="todos"
+              onchange="filterRastreabilidade('todos')"
+              checked
+            />
+            <label for="rastTodos">Todas</label>
+          </div>
+        </div>
+        <img src="./img/ícone_vinicola_rastreada.webp" alt="Rastreabilidade" />
+      </div>
+
+      <div class="menu-item">
+        <div>
+          <a href="#contact">Uvas</a>
+          <select name="" id="selectUvas">
+            <option value="" disabled selected>Selecione uma vinícola</option>
+            <option value=""></option>
+          </select>
+        </div>
+        <img src="./img/ícones-uvas-IG.webp" alt="Contato" />
+      </div>
+
+      <div class="menu-item">
+        <div>
+          <a href="#contact">Associações</a>
+          <select name="opcao">
+            <option value="opcao1">Aviva</option>
+            <option value="opcao2">Viniserra</option>
+            <option value="opcao3">Não associados</option>
+          </select>
+        </div>
+        <img src="./img/ícones-rotas-turismo-IG.webp" alt="Contato" />
+      </div>
+      <div class="menu-item">
+        <div>
+          <a href="#home"
+            >Vinícolas com <br />
+            rótulos disponíveis</a
+          >
+          <input type="radio" />
+          <div>
+            <a href="#home"
+              >Número de rótulos<br />
+              disponíveis
+            </a>
+            <input
+              type="range"
+              id="quantidade"
+              nome="quantidade de rótulos"
+              min="0"
+              max="6"
+            />
+            <p>0 2 4 6</p>
+          </div>
+          <a href="#home">Número de rótulos <br />com rastreabilidade</a>
+          <div>
+            <input
+              type="range"
+              id="quantidade"
+              nome="quantidade de rótulos"
+              min="0"
+              max="6"
+            />
+            <p>0 2 4 6</p>
+          </div>
+        </div>
+        <img src="./img/ícones-dados-producao-IG.webp" alt="Municípios" />
+      </div>
+
+      <div class="menu-item">
+        <div>
+          <p href="#services">Indicadores</p>
+          <a href="#home">Área total<br />disponíveis</a>
+          <div>
+            <input
+              type="range"
+              id="quantidade"
+              nome="quantidade de rótulos"
+              min="0"
+              max="100"
+            />
+            <p>0 á 100ha</p>
+          </div>
+        </div>
+        <img src="./img/ícones-dados-producao-IG.webp" alt="Serviços" />
+      </div>
+
+      <div class="menu-item">
+        <div>
+          <a href="#about">Enoturismo</a>
+          <p>Vinícolas com visitação</p>
+          <input type="radio" />
+          <p>Vinícolas com degustação</p>
+          <input type="radio" />
+          <p>Vinícolas com hospedagem</p>
+          <input type="radio" />
+          <p>Roteiros</p>
+          <select name="opcao">
+            <option value="opcao1">Rota 1</option>
+            <option value="opcao2">Rota 2</option>
+            <option value="opcao3">Rota 3</option>
+          </select>
+        </div>
+        <img src="./img/ícones-enoturismo-IG.webp" alt="Sobre" />
+      </div>
+
+      <div class="menu-item">
+        <div>
+          <a href="#contact"
+            >Destinos <br />
+            verificados</a
+          >
+          <input type="radio" />
+        </div>
+        <img src="./img/ícones-rotas-turismo-IG.webp" alt="Contato" />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
